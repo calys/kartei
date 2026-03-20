@@ -1,6 +1,6 @@
 import { supabase } from "@/lib/supabase";
+import { extractText } from "@/lib/parse-document";
 import { NextRequest, NextResponse } from "next/server";
-import { PDFParse } from "pdf-parse";
 
 export async function POST(request: NextRequest) {
   const formData = await request.formData();
@@ -14,16 +14,8 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  let content: string;
-
-  if (file.type === "application/pdf") {
-    const buffer = await file.arrayBuffer();
-    const pdf = new PDFParse({ data: new Uint8Array(buffer) });
-    const result = await pdf.getText();
-    content = result.text;
-  } else {
-    content = await file.text();
-  }
+  const buffer = Buffer.from(await file.arrayBuffer());
+  const content = await extractText(buffer, file.type);
 
   if (!content.trim()) {
     return NextResponse.json(
