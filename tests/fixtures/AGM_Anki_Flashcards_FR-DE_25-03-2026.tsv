@@ -1,0 +1,106 @@
+Front	Back	Tags
+Dire : Bonsoir à toutes et à tous.	Guten Abend zusammen.	agm_german presence intro
+Dire : Merci de me permettre d’assister à l’assemblée d’aujourd’hui.	Vielen Dank, dass ich heute an der Versammlung teilnehmen darf.	agm_german presence intro
+Dire : Je suis ici aujourd’hui en tant que futur propriétaire.	Ich bin heute als künftiger Eigentümer anwesend.	agm_german presence intro
+Dire : Nous prévoyons de signer l’achat chez le notaire le mois prochain.	Wir werden den Kauf voraussichtlich nächsten Monat beim Notar unterzeichnen.	agm_german presence intro
+Dire : Si tout se passe comme prévu, nous emménagerons en mai ou en juin.	Wenn alles wie geplant läuft, ziehen wir im Mai oder Juni ein.	agm_german presence intro
+Dire : Nous aimerions déjà faire connaissance avec la communauté.	Wir möchten die Gemeinschaft schon jetzt kennenlernen.	agm_german presence intro
+Dire : Je ne suis pas encore propriétaire, donc je participe seulement en tant qu’invité.	Ich bin noch nicht Eigentümer und nehme deshalb nur als Gast teil.	agm_german presence intro
+Dire : Désolé, mon allemand n’est pas parfait.	Entschuldigung, mein Deutsch ist nicht perfekt.	agm_german presence intro
+Demander : Puis-je dire brièvement quelque chose en tant que futur propriétaire ?	Darf ich als künftiger Eigentümer kurz etwas sagen?	agm_german permission status
+Demander : Si cela convient à l’assemblée, j’aurais une courte question.	Falls es für die Versammlung in Ordnung ist, hätte ich eine kurze Frage.	agm_german permission status
+Dire : Je ne veux pas me mettre en avant ; je souhaite seulement poser quelques questions de clarification.	Ich möchte mich nicht vordrängen, sondern nur kurz Verständnisfragen stellen.	agm_german permission status
+Dire : Bien entendu, je ne vote pas aujourd’hui.	Selbstverständlich stimme ich heute nicht mit ab.	agm_german permission status
+Dire : S’il faut une procuration, nous le respectons bien sûr.	Falls eine Vollmacht nötig ist, respektieren wir das natürlich.	agm_german permission status
+Dire : Nous sommes surtout ici aujourd’hui pour écouter et comprendre.	Wir sind heute vor allem hier, um zuzuhören und zu verstehen.	agm_german permission status
+Dire : Nous reprendrons très probablement l’appartement de Mme Walter.	Wir übernehmen voraussichtlich die Wohnung von Frau Walter.	agm_german permission status
+Dire : Merci pour votre compréhension.	Vielen Dank für Ihr Verständnis.	agm_german permission status
+Demander : Pourriez-vous l’expliquer encore une fois, lentement, s’il vous plaît ?	Können Sie das bitte noch einmal langsam erklären?	agm_german meeting_flow
+Demander : Ai-je bien compris ?	Habe ich das richtig verstanden?	agm_german meeting_flow
+Demander : Pourriez-vous résumer cela brièvement, s’il vous plaît ?	Könnten Sie das bitte kurz zusammenfassen?	agm_german meeting_flow
+Demander : Qu’est-ce que cela signifie exactement dans ce contexte ?	Was bedeutet das genau in diesem Zusammenhang?	agm_german meeting_flow
+Demander : Est-ce seulement une information aujourd’hui, ou y aura-t-il un vote ?	Ist das heute nur eine Information oder eine Abstimmung?	agm_german meeting_flow
+Demander : Y aura-t-il une décision formelle à ce sujet aujourd’hui ?	Kommt dazu heute ein Beschluss zustande?	agm_german meeting_flow
+Demander : Quelle est exactement la proposition ?	Wie lautet der genaue Antrag?	agm_german meeting_flow
+Demander : Sur quoi votons-nous exactement maintenant ?	Worüber stimmen wir jetzt genau ab?	agm_german meeting_flow
+Demander : Faut-il ici une majorité simple ou une majorité qualifiée ?	Gilt dafür ein einfaches oder ein qualifiziertes Mehr?	agm_german meeting_flow
+Demander : Est-ce que seules les quotes-parts de valeur comptent ici ?	Zählen hier nur die Wertquoten?	agm_german meeting_flow
+Demander : Y a-t-il encore des questions ouvertes de la part de la communauté à ce sujet ?	Gibt es dazu noch offene Fragen aus der Gemeinschaft?	agm_german meeting_flow
+Dire : J’aurais une question sur les comptes annuels 2025.	Ich hätte eine Frage zur Jahresrechnung 2025.	agm_german accounts
+Demander : Quel poste s’écarte le plus du budget ?	Welche Position weicht am stärksten vom Budget ab?	agm_german accounts
+Demander : Pourquoi les coûts de chauffage sont-ils plus élevés que prévu au budget ?	Warum sind die Heizkosten höher als budgetiert?	agm_german accounts
+Demander : Quel est le montant actuel du fonds de rénovation ?	Wie hoch ist der aktuelle Stand des Erneuerungsfonds?	agm_german accounts
+Demander : Quel est le niveau des liquidités à fin 2025 ?	Wie hoch sind die flüssigen Mittel per Ende 2025?	agm_german accounts
+Demander : Le réviseur a-t-il des remarques sur les comptes ?	Gibt es Bemerkungen der Revisorin zur Rechnung?	agm_german accounts
+Demander : Donner décharge à la gérance signifie-t-il que les comptes sont reconnus comme corrects ?	Bedeutet die Entlastung der Verwaltung, dass die Rechnung als korrekt anerkannt wird?	agm_german accounts
+Demander : Le solde du décompte sera-t-il reporté / refacturé ?	Wird der Abrechnungssaldo weiterverrechnet?	agm_german accounts
+Demander : Y a-t-il des risques importants qui ne sont pas encore visibles dans les comptes ?	Gibt es grössere Risiken, die in der Rechnung noch nicht sichtbar sind?	agm_german accounts
+Dire : J’aurais une question sur le budget 2026.	Ich hätte eine Frage zum Budget 2026.	agm_german budget
+Demander : Pourquoi la contribution au fonds de rénovation est-elle augmentée ?	Warum wird die Einlage in den Erneuerungsfonds erhöht?	agm_german budget
+Demander : Du point de vue actuel, la contribution annuelle est-elle suffisante ?	Ist die jährliche Einlage aus heutiger Sicht ausreichend?	agm_german budget
+Demander : La gérance s’attend-elle à un appel de fonds extraordinaire dans les prochaines années ?	Rechnet die Verwaltung in den nächsten Jahren mit einer Sonderumlage?	agm_german budget
+Demander : Quels investissements sont déjà fermement planifiés ?	Welche Investitionen sind bereits fest eingeplant?	agm_german budget
+Demander : Quels investissements ne sont encore que des estimations provisoires ?	Welche Investitionen sind nur provisorisch geschätzt?	agm_german budget
+Demander : Dans quelle mesure le remplacement des fenêtres prévu en 2028 est-il réaliste ?	Wie realistisch ist der geplante Fensterersatz im Jahr 2028?	agm_german budget
+Demander : Le fonds de rénovation est-il suffisant pour les travaux prévus ?	Reicht der Erneuerungsfonds für die geplanten Arbeiten aus?	agm_german budget
+Dire : La question du chauffage semble être le point le plus important aujourd’hui.	Die Heizungsfrage scheint heute der wichtigste Punkt zu sein.	agm_german heating_general
+Dire : Je voudrais d’abord bien comprendre la situation de départ.	Ich möchte zuerst die Ausgangslage richtig verstehen.	agm_german heating_general
+Demander : Quel âge a exactement le système actuel de régulation du chauffage ?	Wie alt ist die aktuelle Heizungsregelung genau?	agm_german heating_general
+Demander : Quelles parties de l’installation présentent un risque de panne particulier ?	Welche Teile der Anlage sind besonders ausfallgefährdet?	agm_german heating_general
+Demander : N’y a-t-il vraiment plus de pièces de rechange pour le système de régulation existant ?	Gibt es für die bestehende Regulierung wirklich keine Ersatzteile mehr?	agm_german heating_general
+Demander : Que se passe-t-il si le système de régulation actuel tombe en panne à court terme ?	Was passiert, wenn die bestehende Regelung kurzfristig ausfällt?	agm_german heating_general
+Demander : Pourquoi remplace-t-on aussi le répartiteur en plus du système de régulation ?	Warum wird neben der Regulierung auch der Verteiler ersetzt?	agm_german heating_general
+Demander : La rénovation du répartiteur est-elle techniquement nécessaire ou surtout utile sur le plan énergétique ?	Ist die Verteilersanierung technisch notwendig oder vor allem energetisch sinnvoll?	agm_german heating_general
+Demander : Quels travaux seraient nécessaires dans tous les cas, indépendamment du gaz ou du chauffage à distance ?	Welche Arbeiten wären in jedem Fall nötig, unabhängig von Gas oder Fernwärme?	agm_german heating_general
+Demander : Quels travaux dépendent directement du choix ultérieur de la source de chaleur ?	Welche Arbeiten hängen direkt von der späteren Wahl des Wärmeerzeugers ab?	agm_german heating_general
+Demander : Ces travaux doivent-ils absolument être réalisés déjà en 2026 ?	Müssen diese Arbeiten zwingend schon 2026 ausgeführt werden?	agm_german heating_general
+Demander : Pourquoi l’échéance serait-elle seulement en 2027 dans le cas du chauffage à distance ?	Warum wäre der Termin bei Fernwärme erst 2027?	agm_german heating_general
+Demander : Quelle est la précision de l’estimation des coûts ?	Wie hoch ist die Kostengenauigkeit der Schätzung?	agm_german heating_general
+Demander : Une réserve est-elle déjà comprise dans les 119 000 CHF ?	Ist in den CHF 119’000 bereits eine Reserve enthalten?	agm_german heating_general
+Dire : Pour moi, la question centrale aujourd’hui est : gaz ou chauffage à distance.	Für mich ist die zentrale Frage heute Gas oder Fernwärme.	agm_german heating_strategy
+Demander : Quelle option a le plus de sens économiquement selon vous ?	Welche Variante ist aus Ihrer Sicht wirtschaftlich sinnvoller?	agm_german heating_strategy
+Demander : La comparaison entre gaz et chauffage à distance a-t-elle vraiment été calculée sur la même base ?	Ist der Vergleich zwischen Gas und Fernwärme wirklich auf derselben Basis gerechnet?	agm_german heating_strategy
+Demander : Quelles hypothèses ont été retenues pour les prix de l’énergie ?	Welche Annahmen wurden bei den Energiepreisen verwendet?	agm_german heating_strategy
+Demander : Dans quelle mesure le prix du chauffage à distance réagit-il aux futures variations de prix ?	Wie stark reagiert der Fernwärmepreis auf künftige Preisänderungen?	agm_german heating_strategy
+Demander : Dans quelle mesure le prix du gaz réagit-il aux futures variations de prix ?	Wie stark reagiert der Gaspreis auf künftige Preisänderungen?	agm_german heating_strategy
+Demander : L’offre de chauffage à distance est-elle encore valable ?	Ist die Fernwärmeofferte noch gültig?	agm_german heating_strategy
+Demander : Si non, quand recevrons-nous une offre actualisée ?	Falls nein, wann erhalten wir eine aktualisierte Offerte?	agm_german heating_strategy
+Demander : Quelles subventions sont aujourd’hui réellement garanties ?	Welche Förderbeiträge sind heute realistisch gesichert?	agm_german heating_strategy
+Demander : Que se passe-t-il si nous n’annonçons pas de raccordement aujourd’hui ?	Was passiert, wenn wir heute keinen Anschluss anmelden?	agm_german heating_strategy
+Demander : Quel serait le surcoût en cas de raccordement plus tardif ?	Wie hoch wären die Mehrkosten bei einem späteren Anschluss?	agm_german heating_strategy
+Demander : L’option gaz est-elle toujours légalement autorisée dans le canton d’Argovie ?	Ist die Gasvariante rechtlich im Kanton Aargau weiterhin zulässig?	agm_german heating_strategy
+Dire : Je comprends les arguments écologiques en faveur du chauffage à distance.	Ich verstehe die ökologischen Argumente für Fernwärme.	agm_german heating_opinion
+Dire : Mais je comprends aussi l’argument des coûts en faveur du gaz.	Ich verstehe aber auch das Kostenargument zugunsten von Gas.	agm_german heating_opinion
+Dire : À mon avis, la communauté devrait aujourd’hui surtout se concentrer sur des chiffres solides.	Aus meiner Sicht sollte die Gemeinschaft heute vor allem auf belastbare Zahlen achten.	agm_german heating_opinion
+Dire : Il serait important pour moi que nous décidions sur la base d’une offre actuelle.	Mir wäre wichtig, dass wir auf einer aktuellen Offertbasis entscheiden.	agm_german heating_opinion
+Dire : Il serait important pour moi que nous ne sous-estimions pas les risques techniques.	Mir wäre wichtig, dass wir technische Risiken nicht unterschätzen.	agm_german heating_opinion
+Dire : Une économie de 8 000 CHF sans planificateur spécialisé me paraît plutôt faible.	Eine Einsparung von CHF 8’000 ohne Fachplaner wirkt auf mich eher klein.	agm_german heating_opinion
+Dire : Pour un projet de cette taille, je serais plutôt prudent à l’idée d’avancer sans planificateur spécialisé.	Bei einem Projekt dieser Grösse wäre ich mit «ohne Fachplaner» eher vorsichtig.	agm_german heating_opinion
+Dire : J’aimerais comprendre qui prend en charge la coordination s’il n’y a pas de planificateur spécialisé.	Ich würde gern verstehen, wer die Koordination ohne Fachplaner übernimmt.	agm_german heating_opinion
+Dire : Si le chauffage à distance est approuvé, la responsabilité du projet devrait être très claire.	Wenn Fernwärme beschlossen wird, sollte die Projektverantwortung sehr klar sein.	agm_german heating_opinion
+Dire : Pour moi, la transparence des hypothèses serait décisive.	Für mich wäre Transparenz bei den Annahmen entscheidend.	agm_german heating_opinion
+Dire : J’aurais une question sur les réglages du chauffage.	Ich hätte eine Frage zu den Heizungseinstellungen.	agm_german heating_settings
+Demander : Qui fixe aujourd’hui les horaires de chauffage et les températures ?	Wer legt die Heizzeiten und die Temperaturen heute fest?	agm_german heating_settings
+Demander : Quels réglages exactement devraient être rendus publics ?	Welche Einstellungen sollen konkret offengelegt werden?	agm_german heating_settings
+Demander : S’agit-il ici de transparence, de confort, ou des deux ?	Geht es hier um Transparenz, um Komfort oder um beides?	agm_german heating_settings
+Demander : Existe-t-il déjà des règles claires ou des responsabilités sur ce point ?	Gibt es dazu bereits klare Regeln oder Zuständigkeiten?	agm_german heating_settings
+Demander : Une information régulière aux copropriétaires serait-elle utile ?	Wäre eine regelmässige Information an die Eigentümer sinnvoll?	agm_german heating_settings
+Dire : J’aurais encore une question sur l’abri à vélos.	Ich hätte noch eine Frage zum Velounterstand.	agm_german bike_shelter
+Demander : L’emplacement proposé du côté nord est-il définitif ?	Ist der vorgeschlagene Standort auf der Nordseite definitiv?	agm_german bike_shelter
+Demander : Huit places sont-elles suffisantes pour les unités commerciales ?	Reichen acht Plätze für das Gewerbe aus?	agm_german bike_shelter
+Demander : Comment garantira-t-on que l’abri existant sera ensuite réservé aux appartements ?	Wie wird sichergestellt, dass der bestehende Unterstand danach den Wohnungen vorbehalten bleibt?	agm_german bike_shelter
+Demander : Qui s’occupera plus tard de l’ordre et de l’utilisation ?	Wer kümmert sich später um Ordnung und Nutzung?	agm_german bike_shelter
+Demander : L’estimation de 4 000 CHF est-elle fiable ?	Sind die CHF 4’000 eine belastbare Schätzung?	agm_german bike_shelter
+Dire : Je comprends votre point de vue.	Ich verstehe Ihren Punkt.	agm_german diplomacy
+Dire : Je le vois un peu différemment.	Ich sehe das etwas anders.	agm_german diplomacy
+Dire : Je ne suis pas encore sûr que cet argument me convainque.	Ich bin noch nicht sicher, ob mich dieses Argument überzeugt.	agm_german diplomacy
+Demander : Pourrait-on rendre cela un peu plus concret, s’il vous plaît ?	Könnte man das bitte konkreter machen?	agm_german diplomacy
+Demander : Serait-il possible de montrer les chiffres côte à côte ?	Wäre es möglich, die Zahlen nebeneinander zu zeigen?	agm_german diplomacy
+Dire : Je veux seulement m’assurer que je ne me trompe sur rien.	Ich möchte nur sicherstellen, dass ich nichts missverstehe.	agm_german diplomacy
+Dire : De mon point de vue, c’est un point légitime.	Das ist aus meiner Sicht ein berechtigter Punkt.	agm_german diplomacy
+Dire : Il serait important pour moi que nous distinguions clairement les hypothèses des faits.	Mir wäre wichtig, dass wir sauber zwischen Annahmen und Fakten unterscheiden.	agm_german diplomacy
+Dire : Merci pour l’explication.	Vielen Dank für die Erklärung.	agm_german closing
+Dire : C’est beaucoup plus clair pour moi maintenant.	Jetzt ist es für mich deutlich klarer.	agm_german closing
+Dire : Merci pour la discussion ouverte.	Danke für die offene Diskussion.	agm_german closing
+Dire : Nous nous réjouissons d’apprendre bientôt à mieux connaître l’immeuble et la communauté.	Wir freuen uns, die Liegenschaft und die Gemeinschaft bald besser kennenzulernen.	agm_german closing
+Dire : Merci beaucoup pour l’accueil chaleureux.	Vielen Dank für den freundlichen Empfang.	agm_german closing

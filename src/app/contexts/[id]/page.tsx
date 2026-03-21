@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, use } from "react";
 import { FileUpload } from "@/components/file-upload";
-import { ArrowLeft, Sparkles, FileText, Trash2 } from "lucide-react";
+import { ArrowLeft, Sparkles, FileText, Trash2, Import } from "lucide-react";
 import Link from "next/link";
 import type { Context, Document, Flashcard, FlashcardType } from "@/lib/database.types";
 
@@ -178,6 +178,7 @@ export default function ContextDetailPage({
           generating={generatingType === "sentence"}
           onGenerate={() => handleGenerate("sentence")}
           onDelete={(cardId) => handleDeleteCard(cardId, "sentence")}
+          onImported={fetchFlashcards}
         />
       )}
 
@@ -190,6 +191,7 @@ export default function ContextDetailPage({
           generating={generatingType === "vocabulary"}
           onGenerate={() => handleGenerate("vocabulary")}
           onDelete={(cardId) => handleDeleteCard(cardId, "vocabulary")}
+          onImported={fetchFlashcards}
         />
       )}
 
@@ -208,6 +210,7 @@ function FlashcardList({
   generating,
   onGenerate,
   onDelete,
+  onImported,
 }: {
   cards: Flashcard[];
   type: FlashcardType;
@@ -216,8 +219,36 @@ function FlashcardList({
   generating: boolean;
   onGenerate: () => void;
   onDelete: (cardId: string) => void;
+  onImported: () => void;
 }) {
+  const [importing, setImporting] = useState(false);
   const label = type === "sentence" ? "Sentences" : "Vocabulary";
+
+  async function handleImport(files: FileList | null) {
+    if (!files?.length) return;
+    setImporting(true);
+    try {
+      const formData = new FormData();
+      formData.append("file", files[0]);
+      formData.append("context_id", contextId);
+      formData.append("type", type);
+
+      const res = await fetch("/api/import", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Import failed");
+
+      alert(`Imported ${data.imported} cards${data.skipped ? ` (${data.skipped} duplicates skipped)` : ""}`);
+      onImported();
+    } catch (err) {
+      alert(err instanceof Error ? err.message : "Import failed");
+    } finally {
+      setImporting(false);
+    }
+  }
 
   return (
     <div className="space-y-4">
@@ -231,6 +262,19 @@ function FlashcardList({
             <Sparkles className="h-4 w-4" />
             {generating ? "Generating..." : `Generate ${label}`}
           </button>
+          <label
+            className={`flex cursor-pointer items-center gap-2 rounded-lg border border-zinc-300 px-4 py-2 text-sm hover:bg-zinc-50 dark:border-zinc-700 dark:hover:bg-zinc-800 ${importing ? "opacity-50 pointer-events-none" : ""}`}
+          >
+            <Import className="h-4 w-4" />
+            {importing ? "Importing..." : "Import CSV"}
+            <input
+              type="file"
+              accept=".csv,.tsv,.txt"
+              className="hidden"
+              onChange={(e) => handleImport(e.target.files)}
+              disabled={importing}
+            />
+          </label>
           {cards.length > 0 && (
             <Link
               href={`/practice?context_id=${contextId}&type=${type}&name=${encodeURIComponent(contextName)}`}
