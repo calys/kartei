@@ -1,13 +1,23 @@
 import { supabase } from "@/lib/supabase";
 import { generateFlashcards } from "@/lib/openrouter";
 import { NextRequest, NextResponse } from "next/server";
+import type { FlashcardType } from "@/lib/database.types";
+
+const VALID_TYPES: FlashcardType[] = ["sentence", "vocabulary"];
 
 export async function POST(request: NextRequest) {
-  const { context_id, document_id } = await request.json();
+  const { context_id, document_id, type = "sentence" } = await request.json();
 
   if (!context_id) {
     return NextResponse.json(
       { error: "context_id is required" },
+      { status: 400 }
+    );
+  }
+
+  if (!VALID_TYPES.includes(type)) {
+    return NextResponse.json(
+      { error: "type must be 'sentence' or 'vocabulary'" },
       { status: 400 }
     );
   }
@@ -26,21 +36,23 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  // Get existing flashcards to avoid duplicates
+  // Get existing flashcards of same type to avoid duplicates
   const { data: existing } = await supabase
     .from("flashcards")
     .select("front_de")
-    .eq("context_id", context_id);
+    .eq("context_id", context_id)
+    .eq("type", type);
 
   const existingCards = existing?.map((c) => c.front_de) ?? [];
   const combinedContent = docs.map((d) => d.content).join("\n\n---\n\n");
 
-  const pairs = await generateFlashcards(combinedContent, existingCards);
+  const pairs = await generateFlashcards(combinedContent, existingCards, type);
 
   // Insert generated flashcards
   const inserts = pairs.map((pair) => ({
     context_id,
     document_id: document_id || null,
+    type,
     front_de: pair.front_de,
     back_fr: pair.back_fr,
   }));

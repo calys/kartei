@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request: NextRequest) {
   const contextId = request.nextUrl.searchParams.get("context_id");
+  const type = request.nextUrl.searchParams.get("type");
 
   if (!contextId) {
     return NextResponse.json(
@@ -11,11 +12,16 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  const { data, error } = await supabase
+  let query = supabase
     .from("flashcards")
     .select("*")
-    .eq("context_id", contextId)
-    .order("created_at", { ascending: false });
+    .eq("context_id", contextId);
+
+  if (type) {
+    query = query.eq("type", type);
+  }
+
+  const { data, error } = await query.order("created_at", { ascending: false });
 
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });

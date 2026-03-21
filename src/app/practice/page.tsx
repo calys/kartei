@@ -10,6 +10,8 @@ function PracticeContent() {
   const searchParams = useSearchParams();
   const contextId = searchParams.get("context_id");
   const contextName = searchParams.get("name") || "Practice";
+  const type = (searchParams.get("type") || "sentence") as "sentence" | "vocabulary";
+  const typeLabel = type === "sentence" ? "Sentences" : "Vocabulary";
 
   if (!contextId) {
     return (
@@ -31,9 +33,11 @@ function PracticeContent() {
         <ArrowLeft className="h-4 w-4" /> Back to {contextName}
       </Link>
 
-      <h1 className="mb-8 text-2xl font-bold">Practice: {contextName}</h1>
+      <h1 className="mb-8 text-2xl font-bold">
+        Practice {typeLabel}: {contextName}
+      </h1>
 
-      <PracticeSession contextId={contextId} contextName={contextName} />
+      <PracticeSession contextId={contextId} contextName={contextName} type={type} />
     </div>
   );
 }

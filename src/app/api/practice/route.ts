@@ -4,6 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request: NextRequest) {
   const contextId = request.nextUrl.searchParams.get("context_id");
+  const type = request.nextUrl.searchParams.get("type");
 
   if (!contextId) {
     return NextResponse.json(
@@ -13,12 +14,17 @@ export async function GET(request: NextRequest) {
   }
 
   // Get cards due for review (next_review_at <= now), ordered by priority
-  const { data, error } = await supabase
+  let query = supabase
     .from("flashcards")
     .select("*")
     .eq("context_id", contextId)
-    .lte("next_review_at", new Date().toISOString())
-    .order("next_review_at", { ascending: true });
+    .lte("next_review_at", new Date().toISOString());
+
+  if (type) {
+    query = query.eq("type", type);
+  }
+
+  const { data, error } = await query.order("next_review_at", { ascending: true });
 
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });

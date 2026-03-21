@@ -20,11 +20,15 @@ create table documents (
   created_at timestamptz default now() not null
 );
 
+-- Flashcard types
+create type flashcard_type as enum ('sentence', 'vocabulary');
+
 -- Flashcards (German/French pairs with spaced repetition state)
 create table flashcards (
   id uuid primary key default uuid_generate_v4(),
   context_id uuid references contexts(id) on delete cascade not null,
   document_id uuid references documents(id) on delete set null,
+  type flashcard_type default 'sentence' not null,
   front_de text not null,
   back_fr text not null,
   ease_factor real default 2.5 not null,
@@ -37,7 +41,8 @@ create table flashcards (
 -- Indexes for performance
 create index idx_documents_context on documents(context_id);
 create index idx_flashcards_context on flashcards(context_id);
-create index idx_flashcards_review on flashcards(context_id, next_review_at);
+create index idx_flashcards_type on flashcards(context_id, type);
+create index idx_flashcards_review on flashcards(context_id, type, next_review_at);
 
 -- Row Level Security (disabled for personal use — enable if needed)
 alter table contexts enable row level security;

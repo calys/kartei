@@ -1,3 +1,5 @@
+export type FlashcardType = "sentence" | "vocabulary";
+
 export interface Database {
   public: {
     Tables: {
@@ -47,6 +49,7 @@ export interface Database {
           id: string;
           context_id: string;
           document_id: string | null;
+          type: FlashcardType;
           front_de: string;
           back_fr: string;
           ease_factor: number;
@@ -59,6 +62,7 @@ export interface Database {
           id?: string;
           context_id: string;
           document_id?: string | null;
+          type?: FlashcardType;
           front_de: string;
           back_fr: string;
           ease_factor?: number;

@@ -2,15 +2,16 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { RotateCcw, ChevronRight } from "lucide-react";
-import type { Flashcard } from "@/lib/database.types";
+import type { Flashcard, FlashcardType } from "@/lib/database.types";
 import type { ReviewQuality } from "@/lib/spaced-repetition";
 
 interface Props {
   contextId: string;
   contextName: string;
+  type?: FlashcardType;
 }
 
-export function PracticeSession({ contextId, contextName }: Props) {
+export function PracticeSession({ contextId, contextName, type = "sentence" }: Props) {
   const [cards, setCards] = useState<Flashcard[]>([]);
   const [current, setCurrent] = useState(0);
   const [revealed, setRevealed] = useState(false);
@@ -20,7 +21,7 @@ export function PracticeSession({ contextId, contextName }: Props) {
 
   const fetchCards = useCallback(async () => {
     setLoading(true);
-    const res = await fetch(`/api/practice?context_id=${contextId}`);
+    const res = await fetch(`/api/practice?context_id=${contextId}&type=${type}`);
     const data = await res.json();
     setCards(data);
     setCurrent(0);
